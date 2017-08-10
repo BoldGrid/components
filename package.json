@@ -8,8 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm run sass",
-    "sass": "node-sass scss/ --output dist"
+    "postinstall": "gulp"
   },
   "repository": {
     "type": "git",
@@ -20,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/BoldGrid/components/issues"
   },
-  "homepage": "https://github.com/BoldGrid/components#readme"
+  "homepage": "https://github.com/BoldGrid/components#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0"
+  }
 }
