@@ -48,6 +48,8 @@ hr.bg-hr {
 
 	&.bg-hr-6 {
 		border: 2px dashed;
+		border-left: 0;
+		border-right: 0;
 	}
 
 	&.bg-hr-7 {
@@ -80,24 +82,6 @@ hr.bg-hr {
 		background-image: linear-gradient(to left, #f0f0f0, #8c8b8b, #f0f0f0);
 	}
 
-	&.bg-hr-12 {
-	  height: 30px;
-	  border-style: solid;
-	  border-width: 1px 0 0 0;
-	  border-radius: 20px;
-
-	  &:before {
-			display: block;
-			content: "";
-			height: 30px;
-			margin-top: -31px;
-			border-style: solid;
-			border-color: #8c8b8b;
-			border-width: 0 0 1px 0;
-			border-radius: 20px;
-		}
-	}
-
 	&.bg-hr-13 {
 		border: 0;
 		box-shadow: 0 0 10px 1px black;
@@ -106,4 +90,64 @@ hr.bg-hr {
 		}
 	}
 
+	&.bg-hr-14 {
+		border: 0;
+		border-bottom: 10px solid;
+	}
+
+	&.bg-hr-15 {
+		border: 0;
+		border-bottom: 5px solid;
+	}
+
+	&.bg-hr-16 {
+		border: 0;
+		border-bottom: 3px solid;
+	}
+
+	&.bg-hr-17 {
+		border: 0;
+		height: 5px;
+		border-top: 3px solid;
+		border-bottom: 3px solid;
+	}
+
+	&.bg-hr-18 {
+
+		&:before {
+			content: "";
+		    display: block;
+		    position: absolute;
+		    width: 0px;
+		    transform: translateY(-150%);
+		    border: 6px solid;
+		    right: -1px;
+		    top: 12px;
+		}
+		&:after {
+			content: "";
+		    display: block;
+		    position: absolute;
+		    width: 0px;
+		    transform: translateY(-150%);
+		    border: 6px solid;
+		    left: -1px;
+		    top: 12px;
+		}
+	}
+
+	&.bg-hr-19 {
+		@extend .bg-hr-1;
+
+		&:after {
+			border-radius: 50%;
+		}
+	}
+	&.bg-hr-20 {
+		@extend .bg-hr-18;
+
+		&:after, &:before {
+			border-radius: 50%;
+		}
+	}
 }
