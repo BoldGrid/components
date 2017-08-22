@@ -1,7 +1,7 @@
 {
-  "name": "boldgrid-component-library",
+  "name": "boldgrid-components",
   "version": "2.0.0",
-  "description": "BoldGrid Component Library",
+  "description": "BoldGrid Components",
   "main": "index.js",
   "directories": {
     "test": "tests"
