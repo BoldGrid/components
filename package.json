@@ -2,29 +2,67 @@
   "name": "boldgrid-components",
   "version": "2.1.0",
   "description": "BoldGrid Components",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "gulp"
-  },
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BoldGrid/components.git"
   },
-  "author": "",
-  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "author": {
+    "name": "Rafael Ramos",
+    "email": "rramo012@gmail.com"
+  },
   "bugs": {
     "url": "https://github.com/BoldGrid/components/issues"
   },
+  "scripts": {
+    "start": "http-server dist/ -p $PORT",
+    "prod": "http-server dist/ -p 8000 -o",
+    "postinstall": "npm run build",
+    "build": "rm -rf ./dist && NODE_ENV=production webpack --colors",
+    "dev": "webpack-dev-server --colors --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "homepage": "https://github.com/BoldGrid/components#readme",
+  "bundleDependencies": false,
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0"
+    "bulma": "^0.4.3",
+    "ejs-loader": "^0.3.0",
+    "eslint-config-wordpress": "^2.0.0",
+    "html-loader": "^0.5.1",
+    "http-server": "^0.10.0",
+    "jshint-loader": "^0.8.4",
+    "normalize.css": "^7.0.0"
+  },
+  "deprecated": false,
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.0",
+    "eslint": "^3.19.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-html": "^2.0.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.9.0",
+    "html-minifier": "^3.5.2",
+    "html-webpack-plugin": "^2.28.0",
+    "jshint": "^2.9.4",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.5",
+    "standard": "^10.0.2",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "engines": {
+    "node": ">=6"
   }
 }
