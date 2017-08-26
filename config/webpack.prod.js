@@ -82,7 +82,7 @@ use: [ {
     new webpack.NamedModulesPlugin(),
 
     new HtmlWebpackPlugin( {
-      template: path.join( srcDir, 'index.html' ),
+      template: path.join( srcDir, 'index.ejs' ),
       path: distDir,
       filename: 'index.html',
       minify: {
