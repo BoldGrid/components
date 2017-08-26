@@ -77,7 +77,7 @@ use: [ {
     new CopyWebpackPlugin( [
       {
         from: './../static',
-        to: 'static'
+        to: ''
       }
     ] ),
 
