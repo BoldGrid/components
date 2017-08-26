@@ -6,10 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BoldGrid Components</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
-	<%= require("./hr/template.ejs")() %>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<ul class="tabs">
+		<li class="tab-link current" data-tab="tab-1">Horizontal Rule</li>
+		<li class="tab-link" data-tab="tab-2">Section Divider</li>
+	</ul>
+
+	<div id="tab-1" class="tab-content current">
+		<%= require("./hr/template.ejs")() %>
+	</div>
+	<div id="tab-2" class="tab-content">
+		<%= require("./divider/template.ejs")() %>
+	</div>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 </body>
 </html>
