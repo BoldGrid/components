@@ -24,7 +24,11 @@ module.exports = {
   },
 
   module: {
-    rules: [ {
+    rules: [
+		{
+			test: /\.ejs$/,
+			loader: 'ejs-loader'
+		}, {
 test: /\.html$/,
 use: [ {
   loader: 'html-loader',
