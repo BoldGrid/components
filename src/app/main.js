@@ -4,18 +4,24 @@ export class Application {
 
 	init() {
 		this.setupTabs();
+		this.clickHash();
+	}
+
+	clickHash() {
+		let hash = window.location.hash.substr( 1 );
+		$( '[data-tab="' + hash + '"] a' ).click();
 	}
 
 	setupTabs() {
-		$( 'ul.tabs' ).on( 'click', 'li', ( e ) => {
-			let $this = $( e.target ),
+		$( 'ul.tabs' ).on( 'click', 'a', ( e ) => {
+			let $this = $( e.target ).closest( 'li' ),
 				tabId = $this.attr( 'data-tab' );
 
 			$this.siblings().removeClass( 'current' );
 			$( '.tab-content' ).removeClass( 'current' );
 
 			$this.addClass( 'current' );
-			$( '#' + tabId ).addClass( 'current' );
+			$( '.' + tabId ).addClass( 'current' );
 		} );
 	}
 }
