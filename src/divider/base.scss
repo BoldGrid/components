@@ -1,0 +1,34 @@
+.boldgrid-section {
+	height: 400px;
+	position: relative;
+	background: $color1;
+}
+
+.section-divider-element {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: inherit;
+	width: 100%;
+	pointer-events: none;
+
+	&::after {
+		display: block;
+		position: absolute;
+		content: '';
+	}
+
+	&.section-divider-element-top {
+		top: 0;
+		bottom: initial;
+	}
+
+	&.section-divider-flip {
+		transform: rotate(180deg) translateY(-100%);
+	}
+
+	&.section-divider-element-bottom {
+		bottom: 0;
+	}
+}
