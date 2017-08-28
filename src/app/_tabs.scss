@@ -1,4 +1,4 @@
-ul.tabs {
+ul.bg-tabs {
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
@@ -22,7 +22,7 @@ ul.tabs {
 		}
 
 		&:hover {
-			background: rgba(0,0,0,.05);
+			background: rgba(255, 255, 255, 0.20);
 		}
 
 		&.current{
@@ -30,13 +30,13 @@ ul.tabs {
 			color: white;
 
 			&:hover {
-				background: lighten($color, 10%);
+				background: lighten( $color, 10% );
 			}
 		}
 	}
 }
 
-.tab-content {
+.bg-tabs-content {
 	display: none;
 	margin: 0 auto;
 

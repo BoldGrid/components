@@ -13,12 +13,12 @@ export class Application {
 	}
 
 	setupTabs() {
-		$( 'ul.tabs' ).on( 'click', 'a', ( e ) => {
+		$( 'ul.bg-tabs' ).on( 'click', 'a', ( e ) => {
 			let $this = $( e.target ).closest( 'li' ),
 				tabId = $this.attr( 'data-tab' );
 
 			$this.siblings().removeClass( 'current' );
-			$( '.tab-content' ).removeClass( 'current' );
+			$( '.bg-tabs-content' ).removeClass( 'current' );
 
 			$this.addClass( 'current' );
 			$( '.' + tabId ).addClass( 'current' );

@@ -10,7 +10,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
-	<ul class="tabs">
+	<ul class="bg-tabs">
 		<li class="tab-link current" data-tab="horizontal-rule"><a href="#horizontal-rule">Horizontal Rule</a></li>
 		<li class="tab-link" data-tab="section-divider"><a href="#section-divider">Section Divider</a></li>
 		<li class="tab-link" data-tab="tab-4"><a href="#tab-4">Column Shapes</a></li>
@@ -22,13 +22,13 @@
 		<li class="tab-link" data-tab="tab-4"><a href="#tab-4">Social Media</a></li>
 	</ul>
 
-	<div class="tab-content current horizontal-rule">
+	<div class="bg-tabs-content current horizontal-rule">
 		<%= require("./hr/template.ejs")() %>
 	</div>
-	<div class="tab-content section-divider">
+	<div class="bg-tabs-content section-divider">
 		<%= require("./divider/template.ejs")() %>
 	</div>
-	<div data-id="tab-4" class="tab-content">
+	<div data-id="tab-4" class="bg-tabs-content">
 		<h2 class="components-title">Coming Soon</h2>
 	</div>
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
