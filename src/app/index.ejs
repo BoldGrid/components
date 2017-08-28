@@ -13,24 +13,25 @@
 	<ul class="bg-tabs">
 		<li class="tab-link current" data-tab="horizontal-rule"><a href="#horizontal-rule">Horizontal Rule</a></li>
 		<li class="tab-link" data-tab="section-divider"><a href="#section-divider">Section Divider</a></li>
-		<li class="tab-link" data-tab="tab-4"><a href="#tab-4">Column Shapes</a></li>
-		<li class="tab-link" data-tab="tab-4"><a href="#tab-4">Lists</a></li>
-		<li class="tab-link" data-tab="tab-4"><a href="#tab-4">Buttons</a></li>
-		<li class="tab-link" data-tab="tab-4"><a href="#tab-4">Image Designs</a></li>
-		<li class="tab-link" data-tab="tab-4"><a href="#tab-4">Text Effects</a></li>
-		<li class="tab-link" data-tab="tab-4"><a href="#tab-4">Shapes</a></li>
-		<li class="tab-link" data-tab="tab-4"><a href="#tab-4">Social Media</a></li>
+		<li class="tab-link" data-tab="coming-soon"><a href="#coming-soon">Column Shapes</a></li>
+		<li class="tab-link" data-tab="coming-soon"><a href="#coming-soon">Lists</a></li>
+		<li class="tab-link" data-tab="coming-soon"><a href="#coming-soon">Buttons</a></li>
+		<li class="tab-link" data-tab="coming-soon"><a href="#coming-soon">Image Designs</a></li>
+		<li class="tab-link" data-tab="coming-soon"><a href="#coming-soon">Text Effects</a></li>
+		<li class="tab-link" data-tab="coming-soon"><a href="#coming-soon">Shapes</a></li>
+		<li class="tab-link" data-tab="coming-soon"><a href="#coming-soon">Social Media</a></li>
 	</ul>
 
 	<div class="bg-tabs-content current horizontal-rule">
-		<%= require("./hr/template.ejs")() %>
+		<%= require("../components/hr/template.ejs")() %>
 	</div>
 	<div class="bg-tabs-content section-divider">
-		<%= require("./divider/template.ejs")() %>
+		<%= require("../components/divider/template.ejs")() %>
 	</div>
-	<div data-id="tab-4" class="bg-tabs-content">
+	<div class="bg-tabs-content coming-soon">
 		<h2 class="components-title">Coming Soon</h2>
 	</div>
+
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 </body>
 </html>

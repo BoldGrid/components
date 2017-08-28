@@ -13,7 +13,7 @@ module.exports = {
   devtool: 'source-map',
 
   entry: [
-    './index.js'
+    './app/index.js'
   ],
 
   output: {
@@ -86,7 +86,7 @@ use: [ {
     new webpack.NamedModulesPlugin(),
 
     new HtmlWebpackPlugin( {
-      template: path.join( srcDir, 'index.ejs' ),
+      template: path.join( srcDir, 'app/index.ejs' ),
       path: distDir,
       filename: 'index.html',
       minify: {

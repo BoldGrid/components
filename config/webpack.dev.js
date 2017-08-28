@@ -7,7 +7,7 @@ module.exports = {
   context: path.resolve( __dirname, '..', 'src' ),
 
   entry: [
-    './index.js'
+    './app/index.js'
   ],
 
   output: {
@@ -87,7 +87,7 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
 
     new HtmlWebpackPlugin({
-      template: path.join( path.resolve( __dirname, '..', 'src' ), 'index.ejs' ),
+      template: path.join( path.resolve( __dirname, '..', 'src' ), 'app/index.ejs' ),
       path: path.resolve( __dirname, '..', 'dist' ),
       filename: 'index.html'
     })

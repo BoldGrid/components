@@ -1,5 +1,3 @@
-import './main.scss';
-
 export class Application {
 
 	init() {
