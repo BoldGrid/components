@@ -21,7 +21,7 @@
   "scripts": {
     "start": "http-server dist/ -p $PORT",
     "prod": "http-server dist/ -p 3000 -o",
-    "postinstall": "yarn build",
+    "postinstall": "npm run build",
     "build": "npm run rimraf ./dist && NODE_ENV=production webpack --colors",
     "dev": "webpack-dev-server --colors --open",
 	"rimraf": "rimraf",
@@ -65,6 +65,7 @@
     "webpack-dev-server": "^2.4.2"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=6",
+    "yarn": "0.27.*"
   }
 }
