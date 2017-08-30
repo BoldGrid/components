@@ -50,7 +50,7 @@ use: [ {
       options: {
 		  emitWarning: true
       }
-  }*/, {
+  }, */{
       test: /\.(scss|css)$/,
       use: ExtractTextPlugin.extract( {
         fallback: 'style-loader',
