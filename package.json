@@ -24,12 +24,13 @@
     "postinstall": "npm run build",
     "build": "npm run rimraf ./dist && NODE_ENV=production webpack --colors",
     "dev": "webpack-dev-server --colors --open",
-	"rimraf": "rimraf",
+    "rimraf": "rimraf",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "homepage": "https://github.com/BoldGrid/components#readme",
   "bundleDependencies": false,
   "dependencies": {
+    "babel-minify-webpack-plugin": "^0.2.0",
     "bulma": "^0.4.3",
     "ejs-loader": "^0.3.0",
     "eslint-config-wordpress": "^2.0.0",
