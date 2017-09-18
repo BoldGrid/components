@@ -1,6 +1,6 @@
 {
   "name": "boldgrid-components",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "BoldGrid Components",
   "license": "ISC",
   "repository": {
@@ -24,7 +24,7 @@
     "postinstall": "npm run build",
     "build": "npm run rimraf ./dist && NODE_ENV=production webpack --colors",
     "dev": "webpack-dev-server --colors --open",
-	"rimraf": "rimraf",
+    "rimraf": "rimraf",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "homepage": "https://github.com/BoldGrid/components#readme",
