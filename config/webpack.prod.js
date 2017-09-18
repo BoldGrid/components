@@ -3,6 +3,7 @@ const webpack = require( 'webpack' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
+const MinifyPlugin = require( 'babel-minify-webpack-plugin' );
 
 const srcDir = path.resolve( __dirname, '..', 'src' );
 const distDir = path.resolve( __dirname, '..', 'dist' );
@@ -44,6 +45,7 @@ use: [ {
       ]
   }, {
       test: /\.js$/,
+	  exclude: /node_modules/,
       enforce: 'pre',
 
       loader: 'eslint-loader',
@@ -81,7 +83,7 @@ use: [ {
       }
     ] ),
 
-    new webpack.optimize.UglifyJsPlugin(),
+    new MinifyPlugin(),
 
     new webpack.NamedModulesPlugin(),
 
