@@ -1,6 +1,6 @@
 {
-  "name": "boldgrid-components",
-  "version": "2.2.1",
+  "name": "@boldgrid/components",
+  "version": "2.3.0",
   "description": "BoldGrid Components",
   "license": "ISC",
   "repository": {
@@ -11,10 +11,7 @@
   "directories": {
     "test": "tests"
   },
-  "author": {
-    "name": "Rafael Ramos",
-    "email": "rramo012@gmail.com"
-  },
+  "author": "Rafael Ramos <rramo012@gmail.com>",
   "bugs": {
     "url": "https://github.com/BoldGrid/components/issues"
   },
