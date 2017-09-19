@@ -1,15 +1,5 @@
 # Components
 
-## Application
-https://boldgrid-components.herokuapp.com/ @master
+This package has been renamed to @boldgrid/components
 
-## Installing
-```
-# Install dependencies
-yarn install
-
-# Run localhost:3000 with hot reload
-yarn dev
-
-# Build for production
-yarn build
+https://www.npmjs.com/package/@boldgrid/components
