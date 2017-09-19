@@ -3,103 +3,116 @@ const webpack = require( 'webpack' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
+const GenerateJsonPlugin = require( 'generate-json-webpack-plugin' );
 const MinifyPlugin = require( 'babel-minify-webpack-plugin' );
 
 const srcDir = path.resolve( __dirname, '..', 'src' );
 const distDir = path.resolve( __dirname, '..', 'dist' );
 
 module.exports = {
-  context: srcDir,
+	context: srcDir,
 
-  devtool: 'source-map',
+	devtool: 'source-map',
 
-  entry: [
-    './app/index.js'
-  ],
+	entry: {
+		application: './app/index.js',
+		components: srcDir + '/components/components.scss'
+	},
 
-  output: {
-    filename: 'static/bundle.[hash].min.js',
-    path: distDir,
-    publicPath: '/',
-    sourceMapFilename: 'static/bundle.[hash].map'
-  },
+	output: {
+		filename: '[name].[hash].min.js',
+		path: distDir,
+		publicPath: '/',
+		sourceMapFilename: '[name].[hash].map'
+	},
 
-  module: {
-    rules: [
-		{
-			test: /\.ejs$/,
-			loader: 'ejs-loader'
-		}, {
-test: /\.html$/,
-use: [ {
-  loader: 'html-loader',
-  options: {
-	minimize: true
-  }
-} ]
-}, {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: [
-        'babel-loader'
-      ]
-  }, {
-      test: /\.js$/,
-	  exclude: /node_modules/,
-      enforce: 'pre',
+	module: {
+		rules: [
+			{
+				test: /\.ejs$/,
+				loader: 'ejs-loader'
+			},
+			{
+				test: /\.html$/,
+				use: [
+					{
+						loader: 'html-loader',
+						options: {
+							minimize: true
+						}
+					}
+				]
+			},
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: [ 'babel-loader' ]
+			},
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				enforce: 'pre',
 
-      loader: 'eslint-loader',
-      options: {
-		  emitWarning: true
-      }
-  }, {
-      test: /\.(scss|css)$/,
-      use: ExtractTextPlugin.extract( {
-        fallback: 'style-loader',
-        use: [ {
-          loader: 'css-loader',
-          options: {
-            minimize: true
-          }
-        }, {
-          loader: 'sass-loader'
-        } ]
-      } )
-    }, {
-      test: /\.(jpg|jpeg|png|gif|ico|svg)$/,
-      loader: 'url-loader',
-      query: {
-        limit: 10000, // Use data url for assets <= 10KB
-        name: 'static/[name].[hash].[ext]'
-      }
-    } ]
-  },
+				loader: 'eslint-loader',
+				options: {
+					emitWarning: true
+				}
+			},
+			{
+				test: /\.(scss|css)$/,
+				use: ExtractTextPlugin.extract( {
+					fallback: 'style-loader',
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								minimize: true
+							}
+						},
+						{
+							loader: 'sass-loader'
+						}
+					]
+				} )
+			},
+			{
+				test: /\.(jpg|jpeg|png|gif|ico|svg)$/,
+				loader: 'url-loader',
+				query: {
+					limit: 10000, // Use data url for assets <= 10KB
+					name: 'static/[name].[hash].[ext]'
+				}
+			}
+		]
+	},
 
-  plugins: [
-    new CopyWebpackPlugin( [
-      {
-        from: './../static',
-        to: ''
-      }
-    ] ),
+	plugins: [
+		new CopyWebpackPlugin( [
+			{
+				from: './../static',
+				to: ''
+			}
+		] ),
 
-    new MinifyPlugin(),
+		new GenerateJsonPlugin( 'json/components.json', require( '../src/components/config.js' ) ),
 
-    new webpack.NamedModulesPlugin(),
+		new MinifyPlugin(),
 
-    new HtmlWebpackPlugin( {
-      template: path.join( srcDir, 'app/index.ejs' ),
-      path: distDir,
-      filename: 'index.html',
-      minify: {
-        removeComments: true,
-        minifyJS: true,
-        minifyCSS: true,
-        collapseWhitespace: true
-      }
-    } ),
+		new webpack.NamedModulesPlugin(),
 
-	new ExtractTextPlugin( 'css/components.css' ),
-	new ExtractTextPlugin( 'css/components.min.css' )
-  ]
+		new HtmlWebpackPlugin( {
+			template: path.join( srcDir, 'app/index.ejs' ),
+			path: distDir,
+			filename: 'index.html',
+			minify: {
+				removeComments: true,
+				minifyJS: true,
+				minifyCSS: true,
+				collapseWhitespace: true
+			}
+		} ),
+
+		new ExtractTextPlugin( 'css/[name].css' ),
+		new ExtractTextPlugin( 'css/[name].min.css' )
+	]
 };

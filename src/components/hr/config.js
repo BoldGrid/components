@@ -1,4 +1,4 @@
-export default {
+module.exports = {
 	'styles': [
 		'bg-hr bg-hr-16',
 		'bg-hr bg-hr-15',
