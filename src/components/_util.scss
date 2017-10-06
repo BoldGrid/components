@@ -13,17 +13,45 @@
 }
 
 /*--------------------------------------------------------------
+# Paragraph Spacing
+--------------------------------------------------------------*/
+.dynamic-gridblock p {
+	margin: 0;
+	padding: 0;
+}
+
+.dynamic-gridblock p + p {
+	margin-top: 10px;
+}
+
+/*--------------------------------------------------------------
+# Responsive Helpers
+--------------------------------------------------------------*/
+/* sm */
+@media ( max-width: 768px ) {
+	.xs-text-center {
+		text-align: center;
+	}
+}
+/* md */
+@media ( max-width: 992px ) {
+	.sm-text-center {
+		text-align: center;
+	}
+}
+/*--------------------------------------------------------------
 # Backgrounds
 --------------------------------------------------------------*/
 .background-fixed  {
-    background-attachment: fixed !important;
+	background-attachment: fixed !important;
 }
 
 // Force all dynamic gridblock colors to inherit color of context.
+.boldgrid-section,
 .boldgrid-section.dynamic-gridblock {
 	&.bg-background-color,
 	.bg-background-color {
-		* {
+		*:not(.btn) {
 			color: currentColor;
 		}
 		blockquote, hr {
