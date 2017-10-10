@@ -3,6 +3,8 @@ hr.bg-hr {
 	height: 0;
 	position: relative;
 	border: 1px solid;
+	box-sizing: content-box;
+	overflow: visible;
 
 	/** Hifidel **/
 	&.bg-hr-1:after {
