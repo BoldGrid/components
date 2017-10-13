@@ -6,6 +6,17 @@ hr.bg-hr {
 	box-sizing: content-box;
 	overflow: visible;
 
+	.hr-left {
+		margin-left: 0px;
+	}
+	.hr-center {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.hr-right {
+		margin-right: 0px;
+	}
+
 	/** Hifidel **/
 	&.bg-hr-1:after {
 		content: "";
