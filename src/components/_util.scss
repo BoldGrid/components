@@ -62,7 +62,10 @@ img {
 /*--------------------------------------------------------------
 # Backgrounds
 --------------------------------------------------------------*/
-.background-fixed  {
+.background-scroll {
+	background-attachment: scroll !important;
+}
+.background-fixed {
 	background-attachment: fixed !important;
 }
 
