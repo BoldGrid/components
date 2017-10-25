@@ -12,7 +12,7 @@ const distDir = path.resolve( __dirname, '..', 'dist' );
 module.exports = {
 	context: srcDir,
 
-	devtool: 'source-map',
+	devtool: false,
 
 	entry: {
 		application: './app/index.js',
