@@ -1,5 +1,11 @@
 language: node_js
 node_js:
   - "7.1.0"
+before_install:
+    yarn global add greenkeeper-lockfile@1
+before_script:
+    greenkeeper-lockfile-update
 script:
     yarn install
+after_script:
+    greenkeeper-lockfile-upload
