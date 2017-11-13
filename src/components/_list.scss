@@ -51,3 +51,13 @@ ul.bg-list {
 		content: '\f105';
 	}
 }
+
+.boldgrid-section {
+	.fa-ul {
+		margin-left: 0;
+
+		.fa-li {
+			position: static;
+		}
+	}
+}
