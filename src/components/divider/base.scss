@@ -4,14 +4,14 @@
 	background: $color1;
 }
 
-.section-divider-element {
+.bg-divider {
 	position: absolute;
 	bottom: 0;
-	right: 0;
 	left: 0;
-	background-color: inherit;
+	background-color: rgba(0, 0, 0, 0);
 	width: 100%;
 	pointer-events: none;
+	z-index: 1;
 
 	&::after {
 		display: block;
@@ -19,16 +19,32 @@
 		content: '';
 	}
 
-	&.section-divider-element-top {
+	&.bg-divider-top {
 		top: 0;
 		bottom: initial;
+		transform: translateY(-100%);
+
+		&.section-divider-flip {
+			transform: rotate(180deg);
+		}
 	}
 
-	&.section-divider-flip {
-		transform: rotate(180deg) translateY(-100%);
-	}
-
-	&.section-divider-element-bottom {
+	&.bg-divider-bottom {
 		bottom: 0;
+
+		&.section-divider-flip {
+			transform: rotate(180deg) translateY(-100%);
+		}
 	}
+
+}
+
+.bg-divider svg {
+	transform: rotate(180deg);
+}
+
+.bg-divider-triangle-shadow svg {
+	transform: rotate(180deg);
+	position: absolute;
+	bottom: 0;
 }

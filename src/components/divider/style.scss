@@ -2,7 +2,6 @@
 @import './base.scss';
 @import './triangle.scss';
 @import './slanted.scss';
-@import './clouds.scss';
 
 /* Double Diagonal line */
 
@@ -242,95 +241,4 @@ svg#bigTriangleColor {
 	-webkit-transform: skewX(-10deg);
 	transform: skewX(-10deg);
 	box-shadow: 10px -20px darken($color1, 8%);
-}
-
-/* Big half circle */
-#bigHalfCircle path {
-	fill: darken($color1, 7%);
-	stroke: darken($color1, 7%);
-}
-
-/* Big triangle with shadow */
-
-#trianglePath1 {
-	fill: darken($color1, 7%);
-	stroke: darken($color1, 7%);
-}
-
-#trianglePath2 {
-	fill: darken($color1, 13%);
-	stroke: darken($color1, 13%);
-}
-
-/* Inclined Zig Zag */
-.ss-style-inczigzag::before,
-.ss-style-inczigzag::after {
-	left: 0;
-	width: 100%;
-	height: 50px;
-	background-size: 100px 100%;
-}
-
-.ss-style-inczigzag::before {
-	top: 0;
-	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, darken($color1, 11%)), color-stop(0.5, darken($color1, 7%)));
-	background-image: linear-gradient(15deg, darken($color1, 7%) 50%, $color1 50%);
-}
-
-.ss-style-inczigzag::after {
-	bottom: 0;
-	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, darken($color1, 7%)), color-stop(0.5, $color1));
-	background-image: linear-gradient(15deg, $color1 50%, darken($color1, 7%) 50%);
-}
-
-
-
-/* Clouds */
-#clouds path {
-	fill: $cloudColor;
-	stroke: $cloudColor;
-}
-.clouds {
-  background: $cloudColor;
-  p {
-    color:#333;
-  }
-  a {
-    color:darken($color1, 10%);
-    text-decoration:none;
-    &:hover{
-      color:darken($color1, 40%);
-    }
-  }
-}
-
-/* Media Queries for the layout */
-@media screen and (max-width: 68em) {
-	section {
-		font-size: 80%;
-	}
-}
-
-@media screen and (max-width: 54em) {
-	.column {
-		display: block;
-		width: 100% !important;
-	}
-
-	.text:first-child,
-	.text:nth-child(2) {
-		text-align: center;
-	}
-
-	.icon {
-		margin: 0 auto;
-	}
-
-	.col-2 .column:first-child .icon {
-		margin: 0 auto 50px;
-	}
-
-	.col-2 .column:nth-child(2) .icon {
-		margin: 50px auto 0;
-	}
 }
