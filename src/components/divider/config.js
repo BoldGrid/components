@@ -43,14 +43,6 @@ export default {
 			includeTemplate: true
 		},
 		{
-			name: 'curve',
-			includeTemplate: true
-		},
-		{
-			name: 'triangle-shadow',
-			includeTemplate: true
-		},
-		{
 			name: 'drops',
 			includeTemplate: true
 		},

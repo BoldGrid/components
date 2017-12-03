@@ -1,244 +1,59 @@
-@import './original.scss';
-@import './base.scss';
-@import './triangle.scss';
-@import './slanted.scss';
+$baseColor: #e2e2e2;
 
-/* Double Diagonal line */
-
-.ss-style-doublediagonal {
-	z-index: 1;
-	padding-top: 6em;
-	background: darken($color1, 11%);
+.boldgrid-section {
+	height: 600px;
+	position: relative;
+	background: $baseColor;
 }
 
-.ss-style-doublediagonal::before,
-.ss-style-doublediagonal::after {
-	top: 0;
-	left: -25%;
-	z-index: -1;
-	width: 150%;
-	height: 75%;
-	background: inherit;
-	-webkit-transform: rotate(-2deg);
-	transform: rotate(-2deg);
-	-webkit-transform-origin: 0 0;
-	transform-origin: 0 0;
+.empty-section {
+	height: 150px;
+	background: #121212;
 }
 
-.ss-style-doublediagonal::before {
-	height: 50%;
-	background: darken($color1, 15%);
-	-webkit-transform: rotate(-3deg);
-	transform: rotate(-3deg);
-	-webkit-transform-origin: 3% 0;
-	transform-origin: 3% 0;
+.bg-divider svg path {
+	fill: #121212;
 }
 
-/* Half Circle */
-.ss-style-halfcircle::before,
-.ss-style-halfcircle::after {
-	left: 50%;
-	z-index: 10;
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	background: inherit;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-}
-
-.ss-style-halfcircle::before {
-	top: -50px;
-}
-
-.ss-style-halfcircle::after {
-	bottom: -50px;
-}
-
-/* Big Triangle */
-svg#bigTriangleColor {
-	pointer-events: none;
-}
-
-#bigTriangleColor path {
-	fill: darken($color1, 7%);
-	stroke: darken($color1, 7%);
-	stroke-width: 2;
-}
-
-/* Curves */
-#curveUpColor path,
-#curveDownColor path {
-	fill: darken($color1, 7%);
-	stroke: darken($color1, 7%);
-}
-
-/* Multiple Triangles */
-.ss-style-multitriangles::before,
-.ss-style-multitriangles::after {
-	left: 50%;
-	width: 50px;
-	height: 50px;
-	-webkit-transform: translateX(-50%) rotate(45deg);
-	transform: translateX(-50%) rotate(45deg);
-}
-
-.ss-style-multitriangles::before {
-	top: -25px;
-	background: inherit;
-	box-shadow: -50px 50px 0 darken($color1, 7%), 50px -50px 0 darken($color1, 7%);
-}
-
-.ss-style-multitriangles::after {
-	bottom: -25px;
-	z-index: 10;
-	background: inherit;
-	box-shadow: -50px 50px 0 darken($color1, 7%), 50px -50px 0 darken($color1, 7%);
-}
-
-/* Rounded corners */
-.ss-style-roundedcorners::before {
-	top: 100%;
-	left: 0;
-	z-index: 10;
-	width: 100%;
-	height: 60px;
-	border-radius: 0 0 60px 60px;
-	background: inherit;
-}
-
-/* Rounded center split and bottom rounded */
-.ss-style-roundedsplit {
-	padding-top: 7em;
-	border-radius: 0 0 80px 80px;
-}
-
-.ss-style-roundedsplit::before,
-.ss-style-roundedsplit::after {
-	top: -70px;
-	left: 0;
-	z-index: 10;
-	width: 50%;
-	height: 70px;
-	background: inherit;
-}
-
-.ss-style-roundedsplit::before {
-	border-radius: 0 80px 0 0;
-}
-
-.ss-style-roundedsplit::after {
-	left: 50%;
-	border-radius: 80px 0 0 0;
-}
-
-/* Inverted rounded corners */
-.ss-style-invertedrounded {
-	margin-bottom: 90px;
-	padding: 13em 10% 10em;
-	border-radius: 0 0 0 90px;
-}
-
-.ss-style-invertedrounded::before,
-.ss-style-invertedrounded::after {
-	left: 0;
-	z-index: -1;
-	height: 90px;
-	background: darken($color1, 7%);
-}
-
-.ss-style-invertedrounded::before {
-	top: 100%;
-	width: 100%;
-	border-radius: 0 90px 0 0;
-}
-
-.ss-style-invertedrounded::after {
+.bg-divider {
+	position: absolute;
 	bottom: 0;
-	z-index: -1;
-	width: 50%;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0);
+	width: 100%;
+	pointer-events: none;
+	z-index: 1;
+
+	&::after {
+		display: block;
+		position: absolute;
+		content: '';
+	}
+
+	&.bg-divider-top {
+		top: 0;
+		bottom: initial;
+
+		&.bg-divider-flip {
+			transform: rotate(180deg);
+		}
+	}
+
+	&.bg-divider-bottom {
+		bottom: 0;
+		transform: translateY(100%);
+
+		&.bg-divider-flip {
+			transform: rotate(180deg);
+		}
+	}
+
 }
 
-
-/* Zig Zag (3d up and simple down) */
-.ss-style-zigzag::before,
-.ss-style-zigzag::after {
-    right: 0;
-    left: 0;
-    z-index: 10;
-    display: block;
-    height: 90px;
-    background-size: 50px 100%;
-  }
-
-.ss-style-zigzag::before {
-	top: -90px;
-	background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, transparent), color-stop(0.25, darken($color1, 7%)));
-	background-image:
-		linear-gradient(315deg, darken($color1, 2%) 25%, transparent 25%),
-		linear-gradient( 45deg, darken($color1, 7%) 25%, transparent 25%);
-	background-position: 50%;
+.bg-divider-clouds svg {
+	transform: rotate(180deg);
 }
-
-.ss-style-zigzag::after {
-	top: 100%;
-	background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, darken($color1, 7%)), color-stop(0.25, $color1));
-	background-image:
-		linear-gradient(135deg, darken($color1, 7%) 25%, transparent 25%),
-		linear-gradient(225deg, darken($color1, 7%) 25%, transparent 25%);
-	background-position: 50%;
-}
-
-/* Edges */
-.ss-style-roundedges {
-	padding-bottom: 16em;
-}
-
-.ss-style-roundedges::before,
-.ss-style-roundedges::after {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	background: $color1;
-	top: -100px;
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.ss-style-roundedges::before {
-	left: -100px;
-}
-
-.ss-style-roundedges::after {
-	right: -100px;
-}
-
-/* Slit */
-.ss-style-slit {
-	padding-top: 5em;
-}
-
-.ss-style-slit::before,
-.ss-style-slit::after {
-	width: 50.5%;
-	width: -webkit-calc(50% + 10px);
-	width: -moz-calc(50% + 10px);
-	width: calc(50% + 10px);
-	height: 160px;
-	background: $color1;
-	top: -160px;
-}
-
-.ss-style-slit::before {
-	left: -20px;
-	-webkit-transform: skewX(10deg);
-	transform: skewX(10deg);
-	box-shadow: -10px -20px darken($color1, 8%);
-}
-
-.ss-style-slit::after {
-	right: -20px;
-	-webkit-transform: skewX(-10deg);
-	transform: skewX(-10deg);
-	box-shadow: 10px -20px darken($color1, 8%);
+.bg-divider-waves svg {
+	position: absolute;
+    top: 0;
 }
