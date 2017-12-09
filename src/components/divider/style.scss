@@ -33,7 +33,7 @@
 		bottom: 0;
 		transform: translateY(100%);
 
-		&.bg-divider-flip {
+		&.bg-divider-upward {
 			transform: rotate(180deg);
 		}
 	}
@@ -59,7 +59,7 @@
 		top: 0;
 		bottom: initial;
 
-		&.bg-divider-flip {
+		&.bg-divider-upward {
 			transform: rotate(180deg);
 		}
 	}

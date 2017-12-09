@@ -64,8 +64,8 @@ export default {
 			classes.push( `${this.baseName}-${options.position}` );
 		}
 
-		if ( options.orientation ) {
-			classes.push( `${this.baseName}-${options.orientation}` );
+		if ( options.direction ) {
+			classes.push( `${this.baseName}-${options.direction}` );
 		}
 
 		classes = classes.join( ' ' );
