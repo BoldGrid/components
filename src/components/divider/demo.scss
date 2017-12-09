@@ -1,0 +1,22 @@
+$baseColor: #e2e2e2;
+
+.boldgrid-section {
+	height: 600px;
+	position: relative;
+	background: $baseColor;
+}
+
+.empty-section {
+	height: 150px;
+	background: #121212;
+}
+
+.bg-divider svg path {
+	fill: #121212;
+}
+
+.section-divider .components-body {
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+}

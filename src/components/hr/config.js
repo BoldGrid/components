@@ -1,5 +1,5 @@
 module.exports = {
-	'styles': [
+	styles: [
 		'bg-hr bg-hr-16',
 		'bg-hr bg-hr-15',
 		'bg-hr bg-hr-14',
@@ -19,5 +19,10 @@ module.exports = {
 		'bg-hr bg-hr-10',
 		'bg-hr bg-hr-11',
 		'bg-hr bg-hr-13'
-	]
+	],
+	getComponent: function( name ) {
+		return `
+			<hr class="${name}">
+		`;
+	}
 };

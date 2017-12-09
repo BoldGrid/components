@@ -1,70 +1,79 @@
 export default {
-	styles: [ 'bg-divider bg-divider-1' ],
 	baseName: 'bg-divider',
-	components: [
-		{
-			name: 'clouds',
-			includeTemplate: true
+	styles: {
+		'clouds': {
+			svg: require( './svg/clouds.svg' )
 		},
-		{
-			name: 'curve-async',
-			includeTemplate: true
+		'curve-async': {
+			svg: require( './svg/curve-async.svg' )
 		},
-		{
-			name: 'fan-op',
-			includeTemplate: true
+		'circle': {
+			svg: require( './svg/circle.svg' )
 		},
-		{
-			name: 'mountains',
-			includeTemplate: true
+		'fan-op': {
+			svg: require( './svg/fan-op.svg' )
 		},
-		{
-			name: 'tilt-op',
-			includeTemplate: true
+		'mountains': {
+			svg: require( './svg/mountains.svg' )
 		},
-		{
-			name: 'tilt',
-			includeTemplate: true
+		'brush': {
+			svg: require( './svg/brush.svg' )
 		},
-		{
-			name: 'triangle-async',
-			includeTemplate: true
+		'tilt-op': {
+			svg: require( './svg/tilt-op.svg' )
 		},
-		{
-			name: 'waves-smooth',
-			includeTemplate: true
+		'tilt': {
+			svg: require( './svg/tilt.svg' )
 		},
-		{
-			name: 'pyramid',
-			includeTemplate: true
+		'triangle-async': {
+			svg: require( './svg/triangle-async.svg' )
 		},
-		{
-			name: 'big-triangle',
-			includeTemplate: true
+		'waves-smooth': {
+			svg: require( './svg/waves-smooth.svg' )
 		},
-		{
-			name: 'drops',
-			includeTemplate: true
+		'pyramid': {
+			svg: require( './svg/pyramid.svg' )
 		},
-		{
-			name: 'book',
-			includeTemplate: true
+		'big-triangle': {
+			svg: require( './svg/big-triangle.svg' )
 		},
-		{
-			name: 'split',
-			includeTemplate: true
+		'drops': {
+			svg: require( './svg/drops.svg' )
 		},
-		{
-			name: 'waves',
-			includeTemplate: true
+		'book': {
+			svg: require( './svg/book.svg' )
 		},
-		{
-			name: 'arrow',
-			includeTemplate: true
+		'split': {
+			svg: require( './svg/split.svg' )
 		},
-		{
-			name: 'half-circle',
-			includeTemplate: true
+		'waves': {
+			svg: require( './svg/waves.svg' )
+		},
+		'arrow': {
+			svg: require( './svg/arrow.svg' )
+		},
+		'half-circle': {
+			svg: require( './svg/half-circle.svg' )
 		}
-	]
+	},
+	getComponent: function( name, options ) {
+		let classes = [],
+			config = this.styles[ name ];
+
+		if ( options.position ) {
+			classes.push( `${this.baseName}-${options.position}` );
+		}
+
+		if ( options.orientation ) {
+			classes.push( `${this.baseName}-${options.orientation}` );
+		}
+
+		classes = classes.join( ' ' );
+
+		return `
+			<div class="${this.baseName} ${classes} ${this.baseName}-${name}">
+				${config.svg}
+			</div>
+		`;
+	}
 };

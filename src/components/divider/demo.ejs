@@ -1,0 +1,16 @@
+<h2 class="components-title">Divider Styles</h2>
+<div class="components-body">
+	<%
+	let configs = require( './config.js').default;
+	for ( let [ name,  divider ] of Object.entries( configs.styles ) ) {  %>
+	<div class="boldgrid-section empty-section">
+	</div>
+
+	<div class="boldgrid-section">
+		<%=configs.getComponent( name, { position: 'top' } ) %>
+		<%=configs.getComponent( name, { position: 'bottom', orientation: 'flip' } ) %>
+	</div>
+	<% } %>
+</div>
+<div class="boldgrid-section empty-section">
+</div>

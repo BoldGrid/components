@@ -1,20 +1,3 @@
-$baseColor: #e2e2e2;
-
-.boldgrid-section {
-	height: 600px;
-	position: relative;
-	background: $baseColor;
-}
-
-.empty-section {
-	height: 150px;
-	background: #121212;
-}
-
-.bg-divider svg path {
-	fill: #121212;
-}
-
 .bg-divider {
 	position: absolute;
 	bottom: 0;
@@ -23,6 +6,9 @@ $baseColor: #e2e2e2;
 	width: 100%;
 	pointer-events: none;
 	z-index: 1;
+	line-height: 0;
+	overflow: hidden;
+	direction: ltr;
 
 	&::after {
 		display: block;
@@ -30,12 +16,16 @@ $baseColor: #e2e2e2;
 		content: '';
 	}
 
-	&.bg-divider-top {
-		top: 0;
-		bottom: initial;
+	svg {
+		width: calc(100% + 1.3px);
+		height: 100px;
+		display: block;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 
-		&.bg-divider-flip {
-			transform: rotate(180deg);
+		&:not(:root) {
+			overflow: hidden;
 		}
 	}
 
@@ -48,12 +38,29 @@ $baseColor: #e2e2e2;
 		}
 	}
 
-}
+	&.bg-divider-clouds svg {
+		transform: rotate(180deg) translateX(50%);
+	}
 
-.bg-divider-clouds svg {
-	transform: rotate(180deg);
-}
-.bg-divider-waves svg {
-	position: absolute;
-    top: 0;
+	&.bg-divider-arrow svg {
+		height: 50px;
+	}
+
+	&.bg-divider-waves svg {
+		top: 0;
+		height: 30px;
+	}
+
+	&.bg-divider-drops svg {
+		height: 160px;
+	}
+
+	&.bg-divider-top {
+		top: 0;
+		bottom: initial;
+
+		&.bg-divider-flip {
+			transform: rotate(180deg);
+		}
+	}
 }
