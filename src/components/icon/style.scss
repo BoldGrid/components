@@ -1,0 +1,37 @@
+.bg-icon {
+	font-size: 20px;
+	padding: 0.7em;
+
+	&.bg-icon-1 {
+		border-radius: 50px;
+		border-style: solid;
+		border-width: 1px;
+	}
+
+	&.bg-icon-2 {
+		border-radius: 50px;
+		border-style: solid;
+		border-width: 1px;
+		box-shadow: #333333 1px 1px 5px 0px;
+	}
+
+	&.bg-icon-3 {
+		border-radius: 50px;
+		box-shadow: #333333 1px 1px 5px 0px;
+	}
+
+	&.bg-icon-4 {
+		border-style: solid;
+		border-width: 1px;
+	}
+
+	&.bg-icon-5 {
+		border-style: solid;
+		border-width: 1px;
+		box-shadow: #333333 1px 1px 5px 0px;
+	}
+
+	&.bg-icon-6 {
+		box-shadow: #333333 1px 1px 5px 0px;
+	}
+}
