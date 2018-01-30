@@ -16,3 +16,15 @@
         box-shadow: 0px 0px 1px 0px #555555, 0px 4px 4px 0px #555555;
     }
 }
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.bg-img-right {
+		float: right;
+		margin-left: 1em;
+	}
+	.bg-img-left {
+		float: left;
+		margin-right: 1em;
+	}
+}

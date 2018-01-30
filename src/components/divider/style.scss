@@ -1,336 +1,66 @@
-@import './original.scss';
-@import './base.scss';
-@import './triangle.scss';
-@import './slanted.scss';
-@import './clouds.scss';
-
-/* Double Diagonal line */
-
-.ss-style-doublediagonal {
-	z-index: 1;
-	padding-top: 6em;
-	background: darken($color1, 11%);
-}
-
-.ss-style-doublediagonal::before,
-.ss-style-doublediagonal::after {
-	top: 0;
-	left: -25%;
-	z-index: -1;
-	width: 150%;
-	height: 75%;
-	background: inherit;
-	-webkit-transform: rotate(-2deg);
-	transform: rotate(-2deg);
-	-webkit-transform-origin: 0 0;
-	transform-origin: 0 0;
-}
-
-.ss-style-doublediagonal::before {
-	height: 50%;
-	background: darken($color1, 15%);
-	-webkit-transform: rotate(-3deg);
-	transform: rotate(-3deg);
-	-webkit-transform-origin: 3% 0;
-	transform-origin: 3% 0;
-}
-
-/* Half Circle */
-.ss-style-halfcircle::before,
-.ss-style-halfcircle::after {
-	left: 50%;
-	z-index: 10;
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	background: inherit;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-}
-
-.ss-style-halfcircle::before {
-	top: -50px;
-}
-
-.ss-style-halfcircle::after {
-	bottom: -50px;
-}
-
-/* Big Triangle */
-svg#bigTriangleColor {
+.bg-divider {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0);
+	width: 100%;
 	pointer-events: none;
-}
+	z-index: 1;
+	line-height: 0;
+	overflow: hidden;
+	direction: ltr;
 
-#bigTriangleColor path {
-	fill: darken($color1, 7%);
-	stroke: darken($color1, 7%);
-	stroke-width: 2;
-}
-
-/* Curves */
-#curveUpColor path,
-#curveDownColor path {
-	fill: darken($color1, 7%);
-	stroke: darken($color1, 7%);
-}
-
-/* Multiple Triangles */
-.ss-style-multitriangles::before,
-.ss-style-multitriangles::after {
-	left: 50%;
-	width: 50px;
-	height: 50px;
-	-webkit-transform: translateX(-50%) rotate(45deg);
-	transform: translateX(-50%) rotate(45deg);
-}
-
-.ss-style-multitriangles::before {
-	top: -25px;
-	background: inherit;
-	box-shadow: -50px 50px 0 darken($color1, 7%), 50px -50px 0 darken($color1, 7%);
-}
-
-.ss-style-multitriangles::after {
-	bottom: -25px;
-	z-index: 10;
-	background: inherit;
-	box-shadow: -50px 50px 0 darken($color1, 7%), 50px -50px 0 darken($color1, 7%);
-}
-
-/* Rounded corners */
-.ss-style-roundedcorners::before {
-	top: 100%;
-	left: 0;
-	z-index: 10;
-	width: 100%;
-	height: 60px;
-	border-radius: 0 0 60px 60px;
-	background: inherit;
-}
-
-/* Rounded center split and bottom rounded */
-.ss-style-roundedsplit {
-	padding-top: 7em;
-	border-radius: 0 0 80px 80px;
-}
-
-.ss-style-roundedsplit::before,
-.ss-style-roundedsplit::after {
-	top: -70px;
-	left: 0;
-	z-index: 10;
-	width: 50%;
-	height: 70px;
-	background: inherit;
-}
-
-.ss-style-roundedsplit::before {
-	border-radius: 0 80px 0 0;
-}
-
-.ss-style-roundedsplit::after {
-	left: 50%;
-	border-radius: 80px 0 0 0;
-}
-
-/* Inverted rounded corners */
-.ss-style-invertedrounded {
-	margin-bottom: 90px;
-	padding: 13em 10% 10em;
-	border-radius: 0 0 0 90px;
-}
-
-.ss-style-invertedrounded::before,
-.ss-style-invertedrounded::after {
-	left: 0;
-	z-index: -1;
-	height: 90px;
-	background: darken($color1, 7%);
-}
-
-.ss-style-invertedrounded::before {
-	top: 100%;
-	width: 100%;
-	border-radius: 0 90px 0 0;
-}
-
-.ss-style-invertedrounded::after {
-	bottom: 0;
-	z-index: -1;
-	width: 50%;
-}
-
-
-/* Zig Zag (3d up and simple down) */
-.ss-style-zigzag::before,
-.ss-style-zigzag::after {
-    right: 0;
-    left: 0;
-    z-index: 10;
-    display: block;
-    height: 90px;
-    background-size: 50px 100%;
-  }
-
-.ss-style-zigzag::before {
-	top: -90px;
-	background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, transparent), color-stop(0.25, darken($color1, 7%)));
-	background-image:
-		linear-gradient(315deg, darken($color1, 2%) 25%, transparent 25%),
-		linear-gradient( 45deg, darken($color1, 7%) 25%, transparent 25%);
-	background-position: 50%;
-}
-
-.ss-style-zigzag::after {
-	top: 100%;
-	background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, darken($color1, 7%)), color-stop(0.25, $color1));
-	background-image:
-		linear-gradient(135deg, darken($color1, 7%) 25%, transparent 25%),
-		linear-gradient(225deg, darken($color1, 7%) 25%, transparent 25%);
-	background-position: 50%;
-}
-
-/* Edges */
-.ss-style-roundedges {
-	padding-bottom: 16em;
-}
-
-.ss-style-roundedges::before,
-.ss-style-roundedges::after {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-	background: $color1;
-	top: -100px;
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.ss-style-roundedges::before {
-	left: -100px;
-}
-
-.ss-style-roundedges::after {
-	right: -100px;
-}
-
-/* Slit */
-.ss-style-slit {
-	padding-top: 5em;
-}
-
-.ss-style-slit::before,
-.ss-style-slit::after {
-	width: 50.5%;
-	width: -webkit-calc(50% + 10px);
-	width: -moz-calc(50% + 10px);
-	width: calc(50% + 10px);
-	height: 160px;
-	background: $color1;
-	top: -160px;
-}
-
-.ss-style-slit::before {
-	left: -20px;
-	-webkit-transform: skewX(10deg);
-	transform: skewX(10deg);
-	box-shadow: -10px -20px darken($color1, 8%);
-}
-
-.ss-style-slit::after {
-	right: -20px;
-	-webkit-transform: skewX(-10deg);
-	transform: skewX(-10deg);
-	box-shadow: 10px -20px darken($color1, 8%);
-}
-
-/* Big half circle */
-#bigHalfCircle path {
-	fill: darken($color1, 7%);
-	stroke: darken($color1, 7%);
-}
-
-/* Big triangle with shadow */
-
-#trianglePath1 {
-	fill: darken($color1, 7%);
-	stroke: darken($color1, 7%);
-}
-
-#trianglePath2 {
-	fill: darken($color1, 13%);
-	stroke: darken($color1, 13%);
-}
-
-/* Inclined Zig Zag */
-.ss-style-inczigzag::before,
-.ss-style-inczigzag::after {
-	left: 0;
-	width: 100%;
-	height: 50px;
-	background-size: 100px 100%;
-}
-
-.ss-style-inczigzag::before {
-	top: 0;
-	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, darken($color1, 11%)), color-stop(0.5, darken($color1, 7%)));
-	background-image: linear-gradient(15deg, darken($color1, 7%) 50%, $color1 50%);
-}
-
-.ss-style-inczigzag::after {
-	bottom: 0;
-	background-image: -webkit-gradient(linear, 0 0, 10% 100%, color-stop(0.5, darken($color1, 7%)), color-stop(0.5, $color1));
-	background-image: linear-gradient(15deg, $color1 50%, darken($color1, 7%) 50%);
-}
-
-
-
-/* Clouds */
-#clouds path {
-	fill: $cloudColor;
-	stroke: $cloudColor;
-}
-.clouds {
-  background: $cloudColor;
-  p {
-    color:#333;
-  }
-  a {
-    color:darken($color1, 10%);
-    text-decoration:none;
-    &:hover{
-      color:darken($color1, 40%);
-    }
-  }
-}
-
-/* Media Queries for the layout */
-@media screen and (max-width: 68em) {
-	section {
-		font-size: 80%;
-	}
-}
-
-@media screen and (max-width: 54em) {
-	.column {
+	&::after {
 		display: block;
-		width: 100% !important;
+		position: absolute;
+		content: '';
 	}
 
-	.text:first-child,
-	.text:nth-child(2) {
-		text-align: center;
+	svg {
+		width: calc(100% + 1.3px);
+		height: 100px;
+		display: block;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+
+		&:not(:root) {
+			overflow: hidden;
+		}
 	}
 
-	.icon {
-		margin: 0 auto;
+	&.bg-divider-bottom {
+		bottom: 0;
+		transform: translateY(100%);
+
+		&.bg-divider-upward {
+			transform: rotate(180deg);
+		}
 	}
 
-	.col-2 .column:first-child .icon {
-		margin: 0 auto 50px;
+	&.bg-divider-clouds svg {
+		transform: rotate(180deg) translateX(50%);
 	}
 
-	.col-2 .column:nth-child(2) .icon {
-		margin: 50px auto 0;
+	&.bg-divider-arrow svg {
+		height: 50px;
+	}
+
+	&.bg-divider-waves svg {
+		top: 0;
+		height: 30px;
+	}
+
+	&.bg-divider-drops svg {
+		height: 160px;
+	}
+
+	&.bg-divider-top {
+		top: 0;
+		bottom: initial;
+
+		&.bg-divider-upward {
+			transform: rotate(180deg);
+		}
 	}
 }

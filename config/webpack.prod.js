@@ -75,16 +75,18 @@ module.exports = {
 						{
 							loader: 'postcss-loader',
 							options: {
-								plugins: ( loader ) => [
-									require( 'autoprefixer' )
-								]
+								plugins: loader => [ require( 'autoprefixer' ) ]
 							}
 						}
 					]
 				} )
 			},
 			{
-				test: /\.(jpg|jpeg|png|gif|ico|svg)$/,
+				test: /\.svg$/,
+				loader: 'svg-inline-loader'
+			},
+			{
+				test: /\.(jpg|jpeg|png|gif|ico)$/,
 				loader: 'url-loader',
 				query: {
 					limit: 10000, // Use data url for assets <= 10KB
@@ -101,8 +103,6 @@ module.exports = {
 				to: ''
 			}
 		] ),
-
-		new GenerateJsonPlugin( 'json/components.json', require( '../src/components/config.js' ) ),
 
 		new MinifyPlugin(),
 
