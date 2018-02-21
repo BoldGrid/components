@@ -1,0 +1,15 @@
+.bg-video {
+
+	&.bg-video-1 iframe {
+		border: 5px solid;
+	}
+
+	&.bg-video-2 iframe {
+		border: 5px solid;
+		box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+	}
+
+	&.bg-video-3 iframe {
+		box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.75);
+	}
+}
