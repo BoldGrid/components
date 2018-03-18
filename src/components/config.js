@@ -1,6 +1,8 @@
 export default {
 	hr: require( './hr/config.js' ),
 	divider: require( './divider/config.js' ),
+	video: require( './video/config.js' ),
+	icon: require( './icon/config.js' ),
 
 	/**
 	 * Get The markup for a component.
