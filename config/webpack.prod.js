@@ -10,6 +10,8 @@ const srcDir = path.resolve( __dirname, '..', 'src' );
 const distDir = path.resolve( __dirname, '..', 'dist' );
 
 module.exports = {
+	mode: 'production',
+
 	context: srcDir,
 
 	devtool: false,
