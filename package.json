@@ -64,7 +64,7 @@
   },
   "deprecated": false,
   "devDependencies": {
-    "webpack-dev-server": "^2.9.3"
+    "webpack-dev-server": "^3.0.0"
   },
   "engines": {
     "node": ">=6"
