@@ -16,7 +16,7 @@
 				"url": "https://github.com/BoldGrid/components/issues"
 		},
 		"scripts": {
-				"start": "http-server dist/ -p $PORT",
+				"start": "npm run build && http-server dist/ -p $PORT",
 				"prod": "http-server dist/ -p 3000 -o",
 				"build": "npm run rimraf ./dist && NODE_ENV=production webpack --colors",
 				"dev": "webpack-dev-server --colors --open",
