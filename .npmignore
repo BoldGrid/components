@@ -1,6 +1,10 @@
 # Environment Configuration
 .env
 
+# Build output folders
+dist/
+!dist/css
+
 # Logs
 logs
 *.log
