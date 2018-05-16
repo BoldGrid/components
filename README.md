@@ -5,7 +5,15 @@
 ## Application
 https://boldgrid-components.herokuapp.com/ @master
 
-## Installing
+## Usage
+```
+# Install package
+yarn add @boldgrid/components
+
+# Import CSS files from dist folder (SASS).
+@import '@boldgrid/components/dist/css/components.min.css';
+```
+## Development
 ```
 # Install dependencies
 yarn install
@@ -15,3 +23,4 @@ yarn dev
 
 # Build for production
 yarn build
+```
