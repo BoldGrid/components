@@ -7,5 +7,6 @@ before_script:
     greenkeeper-lockfile-update
 script:
     yarn install
+		npm run build
 after_script:
     greenkeeper-lockfile-upload
