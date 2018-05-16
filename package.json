@@ -1,73 +1,72 @@
 {
-  "name": "@boldgrid/components",
-  "version": "2.13.0",
-  "description": "BoldGrid Components",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BoldGrid/components.git"
-  },
-  "main": "dist/css/components.min.css",
-  "directories": {
-    "test": "tests"
-  },
-  "author": "Rafael Ramos <rramo012@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/BoldGrid/components/issues"
-  },
-  "scripts": {
-    "start": "http-server dist/ -p $PORT",
-    "prod": "http-server dist/ -p 3000 -o",
-    "build": "npm run rimraf ./dist && NODE_ENV=production webpack --colors",
-    "dev": "webpack-dev-server --colors --open",
-    "rimraf": "rimraf",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "homepage": "https://github.com/BoldGrid/components#readme",
-  "bundleDependencies": false,
-  "dependencies": {
-  },
-  "deprecated": false,
-  "devDependencies": {
-    "webpack-dev-server": "^3.0.0",
-		"babel-core": "^6.22.1",
-		"babel-eslint": "^8.0.1",
-		"babel-loader": "^7.1.2",
-		"babel-minify-webpack-plugin": "^0.3.0",
-		"babel-preset-es2015": "^6.22.0",
-		"babel-preset-stage-0": "^6.22.0",
-		"bulma": "^0.6.0",
-		"copy-webpack-plugin": "^4.5.1",
-		"css-loader": "^0.28.0",
-		"ejs-loader": "^0.3.1",
-		"eslint": "^4.10.0",
-		"eslint-config-wordpress": "^2.0.0",
-		"eslint-loader": "^2.0.0",
-		"eslint-plugin-html": "^4.0.0",
-		"extract-text-webpack-plugin": "4.0.0-beta.0",
-		"file-loader": "^1.1.5",
-		"generate-json-webpack-plugin": "^0.3.0",
-		"html-loader": "^0.5.1",
-		"html-minifier": "^3.5.2",
-		"html-webpack-plugin": "^3.0.0",
-		"http-server": "^0.11.0",
-		"jshint": "^2.9.4",
-		"jshint-loader": "^0.8.4",
-		"node-sass": "^4.5.3",
-		"normalize.css": "^8.0.0",
-		"postcss-loader": "^2.0.8",
-		"rimraf": "^2.6.1",
-		"sass-loader": "^6.0.5",
-		"standard": "^11.0.0",
-		"style-loader": "^0.20.0",
-		"stylelint": "^9.1.3",
-		"stylelint-config-standard": "^18.0.0",
-		"svg-inline-loader": "^0.8.0",
-		"url-loader": "^1.0.0",
-		"webpack": "^4.0.0",
-		"webpack-cli": "^2.0.12"
-  },
-  "engines": {
-    "node": ">=6"
-  }
+		"name": "@boldgrid/components",
+		"version": "2.14.0",
+		"description": "BoldGrid Components",
+		"license": "ISC",
+		"repository": {
+				"type": "git",
+				"url": "git+https://github.com/BoldGrid/components.git"
+		},
+		"main": "dist/css/components.min.css",
+		"directories": {
+				"test": "tests"
+		},
+		"author": "Rafael Ramos <rramo012@gmail.com>",
+		"bugs": {
+				"url": "https://github.com/BoldGrid/components/issues"
+		},
+		"scripts": {
+				"start": "http-server dist/ -p $PORT",
+				"prod": "http-server dist/ -p 3000 -o",
+				"build": "npm run rimraf ./dist && NODE_ENV=production webpack --colors",
+				"dev": "webpack-dev-server --colors --open",
+				"rimraf": "rimraf",
+				"test": "echo \"Error: no test specified\" && exit 1"
+		},
+		"homepage": "https://github.com/BoldGrid/components#readme",
+		"bundleDependencies": false,
+		"dependencies": {},
+		"deprecated": false,
+		"devDependencies": {
+				"webpack-dev-server": "^3.0.0",
+				"babel-core": "^6.22.1",
+				"babel-eslint": "^8.0.1",
+				"babel-loader": "^7.1.2",
+				"babel-minify-webpack-plugin": "^0.3.0",
+				"babel-preset-es2015": "^6.22.0",
+				"babel-preset-stage-0": "^6.22.0",
+				"bulma": "^0.6.0",
+				"copy-webpack-plugin": "^4.5.1",
+				"css-loader": "^0.28.0",
+				"ejs-loader": "^0.3.1",
+				"eslint": "^4.10.0",
+				"eslint-config-wordpress": "^2.0.0",
+				"eslint-loader": "^2.0.0",
+				"eslint-plugin-html": "^4.0.0",
+				"extract-text-webpack-plugin": "4.0.0-beta.0",
+				"file-loader": "^1.1.5",
+				"generate-json-webpack-plugin": "^0.3.0",
+				"html-loader": "^0.5.1",
+				"html-minifier": "^3.5.2",
+				"html-webpack-plugin": "^3.0.0",
+				"http-server": "^0.11.0",
+				"jshint": "^2.9.4",
+				"jshint-loader": "^0.8.4",
+				"node-sass": "^4.5.3",
+				"normalize.css": "^8.0.0",
+				"postcss-loader": "^2.0.8",
+				"rimraf": "^2.6.1",
+				"sass-loader": "^6.0.5",
+				"standard": "^11.0.0",
+				"style-loader": "^0.20.0",
+				"stylelint": "^9.1.3",
+				"stylelint-config-standard": "^18.0.0",
+				"svg-inline-loader": "^0.8.0",
+				"url-loader": "^1.0.0",
+				"webpack": "^4.0.0",
+				"webpack-cli": "^2.0.12"
+		},
+		"engines": {
+				"node": ">=6"
+		}
 }
