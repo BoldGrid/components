@@ -1,0 +1,43 @@
+$base : 20;
+$large : ( $base * 4 );
+$medium : ( $base * 3 );
+$small : ( $base * 2 );
+
+.row-spacing-lg {
+	padding-top: #{$large}px;
+	padding-bottom: #{$large}px;
+}
+
+.row-spacing-lg-top {
+	padding-top: #{$large}px;
+}
+
+.row-spacing-lg-bottom {
+	padding-bottom: #{$large}px;
+}
+
+.row-spacing-md {
+	padding-top: #{$medium}px;
+	padding-bottom: #{$medium}px;
+}
+
+.row-spacing-md-top {
+	padding-top: #{$medium}px;
+}
+
+.row-spacing-md-bottom {
+	padding-bottom: #{$medium}px;
+}
+
+.row-spacing-sm {
+	padding-top: #{$small}px;
+	padding-bottom: #{$small}px;
+}
+
+.row-spacing-sm-top {
+	padding-top: #{$small}px;
+}
+
+.row-spacing-sm-bottom {
+	padding-bottom: #{$small}px;
+}
