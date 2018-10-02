@@ -1,0 +1,7 @@
+.boldgrid-slider.boldgrid-section-wrap:not(.slick-initialized) .boldgrid-section:not(:first-of-type) {
+	display: none;
+}
+
+.boldgrid-slider.boldgrid-wrap-row:not(.slick-initialized) .row:not(:first-of-type) {
+	display: none !important;
+}
