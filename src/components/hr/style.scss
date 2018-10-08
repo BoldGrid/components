@@ -24,14 +24,14 @@ hr.bg-hr {
 	/** Hifidel **/
 	&.bg-hr-1:after {
 		content: "";
-	    display: block;
-	    height: 0px;
-	    margin: 0 auto;
-	    position: relative;
-	    width: 0px;
-	    transform: translateY(-50%);
-	    top: 50%;
-	    border: 6px solid;
+		display: block;
+		height: 0px;
+		margin: 0 auto;
+		position: relative;
+		width: 0px;
+		transform: translateY(-50%);
+		top: 50%;
+		border: 6px solid;
 	}
 
 	/** Wedge **/
@@ -82,7 +82,7 @@ hr.bg-hr {
 
 	&.bg-hr-8 {
 		border: 1px dotted;
-	    border-bottom: 0;
+		border-bottom: 0;
 		background: transparent;
 	}
 
@@ -96,13 +96,13 @@ hr.bg-hr {
 	&.bg-hr-10 {
 		border: 0;
 		height: 1px;
-		background-image: linear-gradient(to left, rgba(255, 255, 255, 1), #8c8b8b, rgba(255, 255, 255, 1));
+		background-image: linear-gradient(to left, transparent, #8c8b8b, transparent);
 	}
 
 	&.bg-hr-11 {
 		border: 0;
 		height: 3px;
-		background-image: linear-gradient(to left, rgba(255, 255, 255, 1), #8c8b8b, rgba(255, 255, 255, 1));
+		background-image: linear-gradient(to left, transparent, #8c8b8b, transparent);
 	}
 
 	&.bg-hr-13 {
@@ -141,23 +141,23 @@ hr.bg-hr {
 
 		&:before {
 			content: "";
-		    display: block;
-		    position: absolute;
-		    width: 0px;
-		    transform: translateY(-150%);
-		    border: 6px solid;
-		    right: -1px;
-		    top: 12px;
+			display: block;
+			position: absolute;
+			width: 0px;
+			transform: translateY(-150%);
+			border: 6px solid;
+			right: -1px;
+			top: 12px;
 		}
 		&:after {
 			content: "";
-		    display: block;
-		    position: absolute;
-		    width: 0px;
-		    transform: translateY(-150%);
-		    border: 6px solid;
-		    left: -1px;
-		    top: 12px;
+			display: block;
+			position: absolute;
+			width: 0px;
+			transform: translateY(-150%);
+			border: 6px solid;
+			left: -1px;
+			top: 12px;
 		}
 	}
 
