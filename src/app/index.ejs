@@ -13,6 +13,7 @@
 	<ul class="bg-tabs">
 		<%= require("./templates/bg-logo.ejs")() %>
 		<li class="tab-link current" data-tab="horizontal-rule"><a href="#horizontal-rule">Horizontal Rule</a></li>
+		<li class="tab-link" data-tab="blockquote"><a href="#blockquote">Blockquote</a></li>
 		<li class="tab-link" data-tab="section-divider"><a href="#section-divider">Section Divider</a></li>
 		<li class="tab-link" data-tab="coming-soon"><a href="#coming-soon">Column Shapes</a></li>
 		<li class="tab-link" data-tab="coming-soon"><a href="#coming-soon">Lists</a></li>
@@ -28,6 +29,9 @@
 	</div>
 	<div class="bg-tabs-content section-divider">
 		<%= require("../components/divider/demo.ejs")() %>
+	</div>
+	<div class="bg-tabs-content blockquote">
+		<%= require("../components/blockquote/demo.ejs")() %>
 	</div>
 	<div class="bg-tabs-content coming-soon">
 		<h2 class="components-title">Coming Soon</h2>

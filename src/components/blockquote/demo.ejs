@@ -1,0 +1,26 @@
+<style>
+.wrap-hr {
+	margin: 50px;
+}
+hr {
+	color: #121212;
+}
+</style>
+
+
+<h2 class="components-title">Blockquote Styles</h2>
+<div class="components-body">
+	<%
+		let configs = require( './config.js').default;
+		for ( let [ name ] of Object.entries( configs.styles ) ) { %>
+			<p>Without a source:</p>
+			<%=configs.getComponent( name, { direction: 'forwards', cite: false } ) %>
+			<p>With a source:</p>
+			<%=configs.getComponent( name, { direction: 'forwards', cite: true } ) %>
+			<p>Reversed without a source:</p>
+			<%=configs.getComponent( name, { direction: 'reverse', cite: false } ) %>
+			<p>Reversed with a source:</p>
+			<%=configs.getComponent( name, { direction: 'reverse', cite: true } ) %>
+		<% }
+	%>
+</div>
