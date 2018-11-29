@@ -1,0 +1,48 @@
+.bg-blockquote {
+	padding: 10px 20px;
+	margin: 0 0 20px;
+	font-size: 1.125em;
+	text-align: left;
+
+	p {
+		margin: 0 0 10px;
+		font-size: 1.125em;
+	}
+
+	p:last-child, ul:last-child, ol:last-child {
+		margin-bottom: 0;
+	}
+
+	footer, small, .small {
+		display: block;
+		font-size: 80%;
+		line-height: 1.42857;
+		filter: contrast(50%);
+
+		&:before {
+			content: '\2014 \00A0';
+		}
+		&:after {
+			content: '';
+		}
+	}
+
+	&.reverse {
+		padding-right: 15px;
+		padding-left: 0;
+		text-align: right;
+
+		footer, small, .small {
+			&:before {
+				content: '';
+			}
+			&:after {
+				content: '\00A0 \2014';
+			}
+		}
+	}
+
+	@import "scss/plain";
+	@import "scss/border";
+	@import "scss/large-quotes";
+}
