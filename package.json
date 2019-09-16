@@ -28,7 +28,7 @@
 		"dependencies": {},
 		"deprecated": false,
 		"devDependencies": {
-				"webpack-dev-server": "^3.0.0",
+				"webpack-dev-server": "^3.8.1",
 				"babel-core": "^6.22.1",
 				"babel-eslint": "^8.0.1",
 				"babel-loader": "^7.1.2",
