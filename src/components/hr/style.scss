@@ -1,4 +1,4 @@
-hr.bg-hr {
+.bg-hr {
 	background: transparent;
 	height: 0;
 	position: relative;
@@ -9,7 +9,7 @@ hr.bg-hr {
 	margin-right: auto;
 
 	&.hr-left {
-		margin-left: 0px;
+		margin-left: 0;
 		margin-right: auto;
 	}
 	&.hr-center {
@@ -17,7 +17,7 @@ hr.bg-hr {
 		margin-left: auto;
 	}
 	&.hr-right {
-		margin-right: 0px;
+		margin-right: 0;
 		margin-left: auto;
 	}
 
@@ -25,10 +25,10 @@ hr.bg-hr {
 	&.bg-hr-1:after {
 		content: "";
 		display: block;
-		height: 0px;
+		height: 0;
 		margin: 0 auto;
 		position: relative;
-		width: 0px;
+		width: 0;
 		transform: translateY(-50%);
 		top: 50%;
 		border: 6px solid;

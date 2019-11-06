@@ -22,7 +22,7 @@ module.exports = {
 	],
 	getComponent: function( name ) {
 		return `
-			<hr class="${name}">
+			<div class="${name}"></div>
 		`;
 	}
 };
