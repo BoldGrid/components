@@ -1,12 +1,14 @@
 .col, .row, .boldgrid-section, .bg-box {
-	&:not(.bg-box) {
-		&.show-on-hover {
+	&.show-on-hover {
+		:not( .bg-box ) {
 			opacity: 0%;
 			&:hover {
 				opacity: 100%;
 			}
 		}
-		&.hide-on-hover {
+	}
+	&.hide-on-hover {
+		:not( .bg-box ) {
 			opacity: 100%;
 			&:hover {
 				opacity: 0%;
