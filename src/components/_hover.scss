@@ -1,19 +1,19 @@
-.show-on-hover {
-	:not( .bg-box ) {
+.show-children-on-hover {
+	:not( .bg-box ):not( .hvrbox-show-always ) {
 		opacity: 0;
 	}
 	&:hover {
-		:not( .bg-box ) {
+		:not( .bg-box ):not( .hvrbox-show-always ) {
 			opacity: 1;
 		}
 	}
 }
-.hide-on-hover {
-	:not( .bg-box ) {
+.hide-children-on-hover {
+	:not( .bg-box ):not( .hvrbox-show-always ) {
 		opacity: 1;
 	}
 	&:hover {
-		:not( .bg-box ) {
+		:not( .bg-box ):not( .hvrbox-show-always ) {
 			opacity: 0;
 		}
 	}
