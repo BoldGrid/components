@@ -1,0 +1,20 @@
+.show-children-on-hover {
+	:not( .bg-box ):not( .hvrbox-show-always ) {
+		opacity: 0;
+	}
+	&:hover {
+		:not( .bg-box ):not( .hvrbox-show-always ) {
+			opacity: 1;
+		}
+	}
+}
+.hide-children-on-hover {
+	:not( .bg-box ):not( .hvrbox-show-always ) {
+		opacity: 1;
+	}
+	&:hover {
+		:not( .bg-box ):not( .hvrbox-show-always ) {
+			opacity: 0;
+		}
+	}
+}
