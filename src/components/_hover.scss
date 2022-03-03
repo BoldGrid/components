@@ -1,45 +1,115 @@
-.has-hover-bg {
-	:not( .bg-box ).hvrbox-show {
+@mixin show {
+	.hvrbox-show {
 		opacity: 0;
 		transition: opacity .2s ease-out;
 		-moz-transition: opacity .2s ease-out;
 		-webkit-transition: opacity .2s ease-out;
 		-o-transition: opacity .2s ease-out;
 	}
-	&:hover {
-		:not( .bg-box ).hvrbox-show {
-			opacity: 1;
-			transition: opacity .2s ease-in;
-			-moz-transition: opacity .2s ease-in;
-			-webkit-transition: opacity .2s ease-in;
-			-o-transition: opacity .2s ease-in;
-		}
-	}
-	:not( .bg-box ).hvrbox-hide {
+}
+
+@mixin hide {
+	.hvrbox-hide {
 		opacity: 1;
 		transition: opacity .2s ease-in;
 		-moz-transition: opacity .2s ease-in;
 		-webkit-transition: opacity .2s ease-in;
 		-o-transition: opacity .2s ease-in;
 	}
-	&:hover {
-		:not( .bg-box ).hvrbox-hide {
-			opacity: 0;
-			transition: opacity .2s ease-out;
-			-moz-transition: opacity .2s ease-out;
-			-webkit-transition: opacity .2s ease-out;
-			-o-transition: opacity .2s ease-out;
+}
+
+@mixin hvr-show {
+	.hvrbox-show {
+		opacity: 1;
+		transition: opacity .2s ease-out;
+		-moz-transition: opacity .2s ease-out;
+		-webkit-transition: opacity .2s ease-out;
+		-o-transition: opacity .2s ease-out;
+	}
+}
+
+@mixin hvr-hide {
+	.hvrbox-hide {
+		opacity: 0;
+		transition: opacity .2s ease-out;
+		-moz-transition: opacity .2s ease-out;
+		-webkit-transition: opacity .2s ease-out;
+		-o-transition: opacity .2s ease-out;
+	}
+}
+
+
+.has-hover-bg {
+	&[class*=col] {
+		@include show;
+		@include hide;
+		&:hover {
+			@include hvr-show;
+			@include hvr-hide;
+		}
+	}
+	&.row {
+		> {
+			@include show;
+			@include hide;
+		}
+		&:hover {
+			> {
+				@include hvr-show;
+				@include hvr-hide;
+			}
+		}
+	}
+	&.boldgrid-section {
+		> div {
+			> {
+				@include show;
+				@include hide;
+			}
+		}
+
+		&:hover {
+			> div {
+				> {
+					@include hvr-show;
+					@include hvr-hide;
+				}
+			}
 		}
 	}
 }
 
 @media ( hover: none ) {
 	.has-hover-bg {
-		:not( .bg-box ).hvrbox-show {
-			opacity: 1 !important;
+		&[class*=col] {
+			.hvrbox-show {
+				opacity: 1 !important;
+			}
+			.hvrbox-hide {
+				opacity: 0 !important;
+			}
 		}
-		:not( .bg-box ).hvrbox-hide {
-			opacity: 0 !important;
+		&.row {
+			> {
+				.hvrbox-show {
+					opacity: 1 !important;
+				}
+				.hvrbox-hide {
+					opacity: 0 !important;
+				}
+			}
+		}
+		&.boldgrid-section {
+			> div {
+				> {
+					.hvrbox-show {
+						opacity: 1 !important;
+					}
+					.hvrbox-hide {
+						opacity: 0 !important;
+					}
+				}
+			}
 		}
 	}
 }
