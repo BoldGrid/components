@@ -30,7 +30,7 @@
         }
     }
     
-    .table-vertical-align-top {
+    &.table-vertical-align-top {
         thead, tbody, tfoot {
             tr {
                 td, th {
@@ -40,7 +40,7 @@
         }
     }
     
-    .table-vertical-align-middle {
+    &.table-vertical-align-middle {
         thead, tbody, tfoot {
             tr {
                 td, th {
@@ -50,7 +50,7 @@
         }
     }
     
-    .table-vertical-align-bottom {
+    &.table-vertical-align-bottom {
         thead, tbody, tfoot {
             tr {
                 td, th {
@@ -60,7 +60,7 @@
         }
     }
     
-    .table-text-align-center {
+    &.table-text-align-center {
         thead, tbody, tfoot {
             tr {
                 td, th {
@@ -70,7 +70,7 @@
         }
     }
     
-    .table-text-align-right {
+    &.table-text-align-right {
         thead, tbody, tfoot {
             tr {
                 td, th {
@@ -87,12 +87,23 @@
 
 @media screen and (min-width: 768px ) and ( max-width: 991px ) {
     .bg-table.table.table-responsive-sm {
+        &.hide-header-responsive {
+            thead {
+                display: none;
+            }
+        }
         thead {
             tr {
                 display: block;
                 width: 100% !important;
                 height: auto !important;
                 margin-bottom: 0.625em;
+                background-color: #f8f8f8;
+                border-top: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+                border-left: 1px solid #dddd;
+                border-bottom: 3px solid #ddd;
+                padding: 0.35em;
                 th {
                     display: block;
                     width: 100% !important;
@@ -105,6 +116,12 @@
                 display: block;
                 margin-bottom: 0.625em;
                 height: auto !important;
+                background-color: #f8f8f8;
+                border-top: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+                border-left: 1px solid #dddd;
+                border-bottom: 3px solid #ddd;
+                padding: 0.35em;
                 td {
                     display: block;
                     text-align: right !important;
@@ -129,6 +146,12 @@
                 width: 100% !important;
                 height: auto !important;
                 margin-bottom: 0.625em;
+                background-color: #f8f8f8;
+                border-top: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+                border-left: 1px solid #dddd;
+                border-bottom: 3px solid #ddd;
+                padding: 0.35em;
                 th {
                     display: block;
                     width: 100% !important;
@@ -141,6 +164,10 @@
                 display: block;
                 margin-bottom: 0.625em;
                 height: auto !important;
+                border-right: 1px solid #ddd;
+                border-left: 1px solid #dddd;
+                border-bottom: 3px solid #ddd;
+                padding: 0.35em;
                 td {
                     display: block;
                     text-align: right !important;
@@ -155,4 +182,4 @@
             }
         }
     }
-}   
+}
