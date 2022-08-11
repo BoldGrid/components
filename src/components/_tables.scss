@@ -9,7 +9,16 @@
             }
         }
     }
-    
+    &.table-bordered {
+        border: none;
+        > thead:first-child {
+            > tr:first-child {
+                > th {
+                    border-top: 1px solid #ddd;
+                }
+            }
+        }
+    }
     .table-borderless {
         thead, tbody, tfoot {
             tr {
@@ -140,6 +149,11 @@
 
 @media screen and ( max-width: 767px ) {
     .bg-table.table.table-responsive-xs {
+        &.hide-header-responsive {
+            thead {
+                display: none;
+            }
+        }
         thead {
             tr {
                 display: block;
@@ -151,7 +165,6 @@
                 border-right: 1px solid #ddd;
                 border-left: 1px solid #dddd;
                 border-bottom: 3px solid #ddd;
-                padding: 0.35em;
                 th {
                     display: block;
                     width: 100% !important;
@@ -167,7 +180,6 @@
                 border-right: 1px solid #ddd;
                 border-left: 1px solid #dddd;
                 border-bottom: 3px solid #ddd;
-                padding: 0.35em;
                 td {
                     display: block;
                     text-align: right !important;
