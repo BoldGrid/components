@@ -8,6 +8,17 @@
                 display: none;
             }
         }
+        td, th {
+            border-color: #ddd
+        }
+        > thead:first-child {
+            > tr:first-child {
+                > th {
+                    border-top-color: #ddd;
+                }
+            }
+        }
+        
     }
     &.table-bordered {
         border: none;
@@ -19,7 +30,7 @@
             }
         }
     }
-    .table-borderless {
+    &.table-borderless {
         thead, tbody, tfoot {
             tr {
                 td, th {
