@@ -107,6 +107,7 @@
 
 @media screen and (min-width: 768px ) and ( max-width: 991px ) {
     .bg-table.table.table-responsive-sm {
+        border-width: 0 !important;
         &.hide-header-responsive {
             thead {
                 display: none;
@@ -118,12 +119,10 @@
                 width: 100% !important;
                 height: auto !important;
                 margin-bottom: 0.625em;
-                background-color: #f8f8f8;
                 border-top: 1px solid #ddd;
                 border-right: 1px solid #ddd;
                 border-left: 1px solid #dddd;
                 border-bottom: 3px solid #ddd;
-                padding: 0.35em;
                 th {
                     display: block;
                     width: 100% !important;
@@ -136,12 +135,10 @@
                 display: block;
                 margin-bottom: 0.625em;
                 height: auto !important;
-                background-color: #f8f8f8;
                 border-top: 1px solid #ddd;
                 border-right: 1px solid #ddd;
                 border-left: 1px solid #dddd;
                 border-bottom: 3px solid #ddd;
-                padding: 0.35em;
                 td {
                     display: block;
                     text-align: right !important;
@@ -160,6 +157,7 @@
 
 @media screen and ( max-width: 767px ) {
     .bg-table.table.table-responsive-xs {
+        border-width: 0 !important;
         &.hide-header-responsive {
             thead {
                 display: none;
@@ -171,7 +169,6 @@
                 width: 100% !important;
                 height: auto !important;
                 margin-bottom: 0.625em;
-                background-color: #f8f8f8;
                 border-top: 1px solid #ddd;
                 border-right: 1px solid #ddd;
                 border-left: 1px solid #dddd;
