@@ -158,6 +158,8 @@
 @media screen and ( max-width: 767px ) {
     .bg-table.table.table-responsive-xs {
         border-width: 0 !important;
+        width: 750px !important;
+        max-width: 100%;
         &.hide-header-responsive {
             thead {
                 display: none;
@@ -197,6 +199,7 @@
                         content: attr(data-label);
                         float: left;
                         font-weight: 600;
+                        padding-right: 5px;
                     }
                 }
             }
