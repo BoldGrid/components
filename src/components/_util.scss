@@ -76,7 +76,7 @@ img {
 .boldgrid-section.dynamic-gridblock {
 	&.bg-background-color,
 	.bg-background-color {
-		*:not(.btn):not(select):not(textarea):not(input):not(.wp-playlist) {
+		*:not(.btn):not(select):not(textarea):not(input):not(.wp-playlist):not(a) {
 			color: currentColor;
 		}
 
