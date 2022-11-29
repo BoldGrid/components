@@ -75,7 +75,7 @@ img {
 .boldgrid-section:not( .mega-menu-item ),
 .boldgrid-section:not( .mega-menu-item ).dynamic-gridblock {
 	&.bg-background-color,
-	.bg-background-color {
+	.bg-background-color:not( .mega-menu-item ) {
 		*:not(.btn):not(select):not(textarea):not(input):not(.wp-playlist) {
 			color: currentColor;
 		}
