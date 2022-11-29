@@ -72,11 +72,11 @@ img {
 }
 
 // Force all dynamic gridblock colors to inherit color of context.
-.boldgrid-section,
-.boldgrid-section.dynamic-gridblock {
+.boldgrid-section:not( .mega-menu-item ),
+.boldgrid-section:not( .mega-menu-item ).dynamic-gridblock {
 	&.bg-background-color,
 	.bg-background-color {
-		*:not(.btn):not(select):not(textarea):not(input):not(.wp-playlist):not(a) {
+		*:not(.btn):not(select):not(textarea):not(input):not(.wp-playlist) {
 			color: currentColor;
 		}
 
