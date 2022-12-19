@@ -40,7 +40,7 @@
 
 
 .has-hover-bg {
-	&[class*=col] {
+	&[class*=col-], &.bg-box {
 		@include show;
 		@include hide;
 		&:hover {
@@ -81,7 +81,7 @@
 
 @media screen and ( max-width: 991px ) {
 	.has-hover-bg {
-		&[class*=col] {
+		&[class*=col-], &.bg-box {
 			.hvrbox-show {
 				opacity: 1 !important;
 			}
