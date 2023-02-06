@@ -144,3 +144,15 @@ iframe.boldgrid-google-maps,
 		width: 0;
 	}
 }
+
+/* --------------------------------------------------------------
+# Boldgrid Shortcodes
+-------------------------------------------------------------- */
+.boldgrid-shortcode {
+	.bgc_component_post_categories,
+	.bgc_component_post_tags {
+		a:not( .btn ) {
+			color: inherit;
+		}
+	}
+}
