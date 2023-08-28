@@ -1,8 +1,8 @@
 @mixin text-contrast($n) {
-  $color-brightness: round((red($n) * 299) + (green($n) * 587) + calc( (blue($n) * 114) / 1000) );
-  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + calc( (blue(#ffffff) * 114) / 1000 ) );
+  $color-brightness: round((red($n) * 299) + (green($n) * 587) + ( (blue($n) * 114) * 0.001 ) );
+  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + ( (blue(#ffffff) * 114) * 0.001 ) );
 
-  @if abs($color-brightness) < calc( ( $light-color / 2 ) ){
+  @if abs($color-brightness) < ( $light-color * 0.5 ) {
     color: white;
   }
 

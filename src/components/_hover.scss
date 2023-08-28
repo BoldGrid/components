@@ -39,7 +39,7 @@
 }
 
 
-.has-hover-bg {
+.has-hover-bg, .has-hover-image, .has-hover-color {
 	&[class*=col-], &.bg-box {
 		@include show;
 		@include hide;
@@ -80,7 +80,7 @@
 }
 
 @media screen and ( max-width: 991px ) {
-	.has-hover-bg {
+	.has-hover-bg, .has-hover-image, .has-hover-color {
 		&[class*=col-], &.bg-box {
 			.hvrbox-show {
 				opacity: 1 !important;
@@ -111,5 +111,32 @@
 				}
 			}
 		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.has-hover-color:hover {
+		background-color: var(--hover-background-color) !important;
+		background-image: none !important;
+	}
+	
+	.has-hover-image:hover {
+		background-image: var(--hover-background-image) !important;
+		background-size: var(--hover-background-size) !important;
+		background-repeat: var(--hover-background-repeat) !important;
+		background-position: var(--hover-background-position) !important;
+	}
+}
+@media screen and (max-width: 991px) {
+	.has-hover-color.hover-mobile-bg {
+		background-color: var(--hover-background-color) !important;
+		background-image: none !important;
+	}
+	
+	.has-hover-image.hover-mobile-bg {
+		background-image: var(--hover-background-image) !important;
+		background-size: var(--hover-background-size) !important;
+		background-repeat: var(--hover-background-repeat) !important;
+		background-position: var(--hover-background-position) !important;
 	}
 }
