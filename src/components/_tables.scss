@@ -160,12 +160,15 @@
         border-width: 0 !important;
         width: 750px !important;
         max-width: 100%;
+        display: inline-block;
         &.hide-header-responsive {
             thead {
                 display: none;
             }
         }
         thead {
+            width: 100%;
+            display: inline-block;
             tr {
                 display: block;
                 width: 100% !important;
@@ -183,6 +186,8 @@
             }
         }
         tbody {
+            width: 100%;
+            display: inline-block;
             tr {
                 display: block;
                 margin-bottom: 0.625em;
